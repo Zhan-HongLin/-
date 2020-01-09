@@ -1,0 +1,50 @@
+<!DOCTYPEhtml>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+	<title>登入頁面</title>
+</head>
+<body>
+
+	<h2>歡迎使用本網站：請進行登入或註冊</h2>
+	
+	<p>{{alarm}}</p>
+	
+	<style>
+	table, th, td {
+    border: 1px solid blue;
+	}
+	th, td {
+		padding: 10px;
+	}
+	</style>
+	
+	<table style="width:30%">
+	<tr>
+        <th>
+            <form action="/myweb/success/"method="post">{% csrf_token %}
+        	請輸入帳號:<input type="text" name="username"> <br>
+        </th>
+        <th>
+            <form action="/myweb/success/"method="post">{% csrf_token %}
+        	請輸入密碼:<input type="text" name="password"> <br>             
+        </th>
+        <th>
+            <form action="/myweb/success/"method="post">{% csrf_token %}
+            
+            <input type="submit" value="登入">
+            </form>
+       </th>
+       <th>
+            <form action="/myweb/register/" method="get"> 
+    		<input type="submit" value="註冊">
+            </form>
+       </th>
+	</tr>
+	
+	</table>
+
+	
+</body>
+</html>
